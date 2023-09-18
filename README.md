@@ -17,3 +17,8 @@ install icons form material ui --> npm i @mui/icons-material
 run command to for connection to backend --> npm i axios
 
 installing react router --> npm i react router dom
+
+babel dependencies --> npm install --save-dev @babel/preset-react
+
+install redux toolkit --> npm install @reduxjs/toolkit
+                      --> npm install @reduxjs/toolkit react-redux
