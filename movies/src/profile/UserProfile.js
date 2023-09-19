@@ -46,7 +46,7 @@ const UserProfile = () => {
                         <AccountCircleIcon
                             sx={{ fontSize: "10rem", textAlign: "center", ml: 3 }}
                         />
-                        <Typography
+                        <Typography 
                             padding={1}
                             width={"auto"}
                             textAlign={"center"}
@@ -67,7 +67,7 @@ const UserProfile = () => {
                         </Typography>
                     </Box>
                 )}
-                {bookings && (
+                {bookings(
                     <Box width={"70%"} display="flex" flexDirection={"column"}>
                         <Typography
                             variant="h3"

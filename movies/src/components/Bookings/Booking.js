@@ -30,7 +30,7 @@ const Booking = () => {
     };
     return (
         <div>
-            {movie && (
+            {(
                 <Fragment>
                     <Typography
                         padding={3}

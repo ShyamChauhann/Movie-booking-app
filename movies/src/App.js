@@ -8,8 +8,8 @@ import Header from "./components/Header";
 import HomePage from "./components/HomePage";
 import AddMovie from "./components/Movies/AddMovie";
 import Movies from "./components/Movies/Movies";
-// import UserProfile from "./profile/UserProfile";
-// import AdminProfile from "./profile/AdminProfile";
+import UserProfile from "./profile/UserProfile";
+import AdminProfile from "./profile/AdminProfile";
 import { adminActions, userActions } from "./store";
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
           {isUserLoggedIn && !isAdminLoggedIn && (
             <>
               {" "}
-              {/* <Route path="/user" element={<UserProfile />} /> */}
+              <Route path="/user" element={<UserProfile />} />
               <Route path="/booking/:id" element={<Booking />} />
             </>
           )}
@@ -50,7 +50,7 @@ function App() {
             <>
               {" "}
               <Route path="/add" element={<AddMovie />} />
-              {/* <Route path="/user-admin" element={<AdminProfile />} />{" "} */}
+              <Route path="/user-admin" element={<AdminProfile />} />{" "}
             </>
           )}
         </Routes>
