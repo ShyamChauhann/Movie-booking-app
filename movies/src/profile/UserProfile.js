@@ -42,11 +42,11 @@ const UserProfile = () => {
                         alignItems={"center"}
                         width={"30%"}
                         padding={3}
-                    >
+                    >       
                         <AccountCircleIcon
                             sx={{ fontSize: "10rem", textAlign: "center", ml: 3 }}
                         />
-                        <Typography 
+                        <Typography  
                             padding={1}
                             width={"auto"}
                             textAlign={"center"}

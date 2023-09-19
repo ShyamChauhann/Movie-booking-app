@@ -72,7 +72,7 @@ export const newBooking = async (data) => {
 export const getUserBooking = async () => {
     const id = localStorage.getItem("userId");
     const res = await axios
-        .get(`/user/bookings/${id}`)
+        .get(`/user/booking/${id}`)
         .catch((err) => console.log(err));
 
     if (res.status !== 200) {
