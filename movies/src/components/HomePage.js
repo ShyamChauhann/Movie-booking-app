@@ -15,7 +15,7 @@ const HomePage = () => {
     return (
         <Box width={"100%"} height={"100%"} margin={"auto"} marginTop={2}>
             <Box width={"80%"} height={"40%"} margin={"auto"} padding={2}>
-                <img src='https://www.thestatesman.com/wp-content/uploads/2022/06/maxresdefault-1-1.jpg' alt="bramhastra" width={"40%"} height={"100%"} />
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSrzAtkw_WdjFDhvnhEEsWcnqmEzQXsiqMBfdaQaWJM7UFJBPkoxaIXAGyn7hqw1xtYVE&usqp=CAU' alt="Jawan" width={"40%"} height={"100%"} />
             </Box>
             <Box padding={5} margin={"auto"} >
                 <Typography variant='h4' textAlign={"center"}>
