@@ -1,6 +1,7 @@
 // mongodb+srv://maharshibhagatji:<password>@cluster0.0590oc9.mongodb.net/?retryWrites=true&w=majority
 import express from "express";
 import mongoose from "mongoose";
+import cors from 'cors';
 import dotenv from 'dotenv'
 import userroute from "./routes/user_route.js";
 import adminroute from "./routes/admin_route.js"
@@ -10,7 +11,7 @@ import bookingroute from "./routes/booking_route.js"
 dotenv.config()
 const app = express()
 
-
+app.use(cors());
 app.use(express.json())
 app.use("/users", userroute)
 app.use("/admin", adminroute)
