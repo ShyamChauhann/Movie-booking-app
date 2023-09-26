@@ -14,6 +14,7 @@ Backend is created using react --> npx create-react-app backend
 installing Material UI --> npm install @mui/material @emotion/react @emotion/styled
 
 install icons form material ui --> npm i @mui/icons-material
+
 run command to for connection to backend --> npm i axios
 
 installing react router --> npm i react router dom
