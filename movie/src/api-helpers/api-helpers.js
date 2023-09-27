@@ -72,7 +72,7 @@ export const newBooking = async (data) => {
 export const getUserBooking = async () => {
   const id = localStorage.getItem("userId");
   const res = await axios
-    .get(`http://localhost:5000/user/bookings/${id}`)
+    .get(`http://localhost:5000/users/bookings/${id}`)
     .catch((err) => console.log(err));
 
   if (res.status !== 200) {
@@ -97,7 +97,7 @@ export const deleteBooking = async (id) => {
 
 export const getUserDetails = async () => {
   const id = localStorage.getItem("userId");
-  const res = await axios.get(`http://localhost:5000/user/${id}`).catch((err) => console.log(err));
+  const res = await axios.get(`http://localhost:5000/users/${id}`).catch((err) => console.log(err));
   if (res.status !== 200) {
     return console.log("Unexpected Error");
   }

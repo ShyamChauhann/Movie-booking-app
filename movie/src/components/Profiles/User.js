@@ -15,20 +15,25 @@ import { useNavigate } from "react-router-dom";
 const User = () => {
   const navigate = useNavigate();
   const [bookings, setBookings] = useState([]);
-  const onResReceived = (res) => {
+
+  const onResReceived = (res) => {  
     setBookings(res.bookings);
   };
+  
   useEffect(() => {
     getUserBookings()
       .then(onResReceived)
       .catch((err) => console.log(err));
   }, []);
-  console.log(bookings);
+
+  // console.log(bookings);
+
   const handleDelete = (id) => {
     deleteBooking(id)
       .then(() => navigate("/"))
       .catch((err) => console.log(err));
   };
+
   return (
     <Box width="100%" display={"flex"}>
       <Box
