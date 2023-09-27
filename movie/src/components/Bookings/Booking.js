@@ -7,10 +7,11 @@ import { getMovieDetails, newBooking } from "../../api-helpers/api-helpers";
 const Booking = () => {
   const [movie, setMovie] = useState();
   const [inputs, setInputs] = useState({ seatNumber: "", date: "" });
+  
   const id = useParams().id;
-  console.log(id);
 
   useEffect(() => {
+    // console.log(id);
     getMovieDetails(id)
       .then((res) => setMovie(res.movie))
       .catch((err) => console.log(err));
@@ -59,7 +60,7 @@ const Booking = () => {
                 <Typography paddingTop={2}>{movie.description}</Typography>
                 <Typography fontWeight={"bold"} marginTop={1}>
                   Starrer:
-                  {movie.actors.map((actor) => " " + actor + " ")}
+                  {/* {movie && movie.actors.map((actor) => " " + actor + " ")} */}
                 </Typography>
                 <Typography fontWeight={"bold"} marginTop={1}>
                   Release Date: {new Date(movie.releaseDate).toDateString()}

@@ -110,8 +110,9 @@ export const login = async (req, res, next) => {
   if (!isPassword) {
     return res.status(400).json({ message: "Incorrect Password" })
   }
-  return res.status(200).json({ message: "Login Successful" })
+  return res.status(200).json({ message: "Login Successful", id:user._id });
 }
+
 export const getAllBookings = async (req, res, next) => {
   const id = req.params.id
   let bookings

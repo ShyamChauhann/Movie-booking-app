@@ -69,6 +69,7 @@ export const adminLogin = async (req, res, next) => {
 
     return res.status(200).json({ message: "Successful authentication",token,id:exe_admin._id})
 }   
+
 export const getAdmin = async(req,res,next) => {
     let admin
     try{
@@ -82,5 +83,18 @@ export const getAdmin = async(req,res,next) => {
     return res.status(200).json({admin})
 }
 
+export const getAdminById = async (req, res, next) => {
+    const id = req.params.id;
 
+    let admin;
+    try {
+        admin = await Admin.findById(id).populate("addedMovies");
+    } catch (err) {
+        return console.log(err);
+    }
+    if (!admin) {
+        return console.log("Cannot find Admin");
+    }
+    return res.status(200).json({ admin });
+};
 

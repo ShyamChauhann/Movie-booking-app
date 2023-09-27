@@ -6,6 +6,7 @@ import User from "../model/User"
 
 export const newBooking = async(req,res,next) => {
     const {movie,date,seatNumber,user} = req.body
+    console.log({ movie, date, seatNumber, user });
 
     let exe_movie
     let exe_user
@@ -65,6 +66,7 @@ export const getBookingById = async(req,res,next) => {
 
 export const deleteBooking = async (req, res, next) => {
     const id = req.params.id;
+    console.log(id);
     let booking;
     try {
       booking = await Bookings.findByIdAndRemove(id).populate("user movie");
