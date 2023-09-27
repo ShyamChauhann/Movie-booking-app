@@ -7,7 +7,7 @@ for new user open project in code editor(VS code) and delete node_modules folder
 
 to run code --> npm start
 
-run in postman --> http://localhost:5000/user
+run in postman --> http://localhost:5000/users
 
 Backend is created using react --> npx create-react-app backend
 
