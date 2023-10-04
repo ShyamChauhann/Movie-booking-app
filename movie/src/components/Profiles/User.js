@@ -16,10 +16,10 @@ const User = () => {
   const navigate = useNavigate();
   const [bookings, setBookings] = useState([]);
 
-  const onResReceived = (res) => {  
+  const onResReceived = (res) => {
     setBookings(res.bookings);
   };
-  
+
   useEffect(() => {
     getUserBookings()
       .then(onResReceived)
