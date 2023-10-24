@@ -22,7 +22,7 @@ const AddMovie = () => {
     featured: false,
   });
   const [actors, setActors] = useState([]);
-  const [actor, setActor] = useState("");
+  // const [actor, setActor] = useState("");
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -88,7 +88,7 @@ const AddMovie = () => {
             variant="standard"
             margin="normal"
           />
-          <FormLabel sx={labelProps}>Actor</FormLabel>
+          {/* <FormLabel sx={labelProps}>Actor</FormLabel>
           <Box display={"flex"}>
             <TextField
               value={actor}
@@ -103,9 +103,9 @@ const AddMovie = () => {
                 setActor("");
               }}
             >
-              Add
-            </Button>
-          </Box>
+              Add */}
+            {/* </Button> */}
+          {/* </Box> */}
           <FormLabel sx={labelProps}>Featured</FormLabel>
           <Checkbox
             name="fetaured"

@@ -19,14 +19,17 @@ const AuthForm = ({ onSubmit, isAdmin }) => {
   });
   const [isSignup, setIsSignup] = useState(false);
   const handleChange = (e) => {
+    console.log('hiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii')
     setInputs((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
   };
   const handleSubmit = (e) => {
+    console.log('##########################################################')
     e.preventDefault();
-    onSubmit({ inputs, signup: isAdmin ? false : isSignup });
+    let v = onSubmit({ inputs, signup: isAdmin ? false : isSignup });
+    console.log(v + ' %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%')
   };
   return (
     <Dialog PaperProps={{ style: { borderRadius: 20 } }} open={true}>

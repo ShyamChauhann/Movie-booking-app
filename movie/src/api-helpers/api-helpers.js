@@ -20,9 +20,8 @@ export const sendUserAuthRequest = async (data, signup) => {
     .catch((err) => console.log(err));
 
   if (res.status !== 200 && res.status !== 201) {
-    console.log("Unexpected Error Occurred");
+    return console.log("Unexpected Error Occurred");
   }
-
   const resData = await res.data;
   return resData;
 };
@@ -115,7 +114,7 @@ export const addMovie = async (data) => {
         releaseDate: data.releaseDate,
         posterUrl: data.posterUrl,
         fetaured: data.fetaured,
-        actors: data.actors,
+        // actors: data.actors,
         admin: localStorage.getItem("adminId"),
       },
       {

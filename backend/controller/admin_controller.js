@@ -68,7 +68,8 @@ export const adminLogin = async (req, res, next) => {
     })
 
     return res.status(200).json({ message: "Successful authentication",token,id:exe_admin._id})
-}   
+} 
+  
 export const getAdmin = async(req,res,next) => {
     let admin
     try{

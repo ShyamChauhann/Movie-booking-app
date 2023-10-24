@@ -36,7 +36,7 @@ const HomePage = () => {
       >
         {movies &&
           movies
-            .slice(0, 6)
+            .slice(0, 3)
             .map((movie, index) =>{
               // console.log(movie);
             return(  

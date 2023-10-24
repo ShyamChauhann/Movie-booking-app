@@ -71,7 +71,7 @@ export const deleteBooking = async (req, res, next) => {
       console.log(booking);
       const session = await mongoose.startSession();
       session.startTransaction();
-      await booking.user.bookings.pull(booking);
+      await booking.user.bookings.pull(booking);        
       await booking.movie.bookings.pull(booking);
       await booking.movie.save({ session });
       await booking.user.save({ session });

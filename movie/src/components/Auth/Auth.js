@@ -16,6 +16,7 @@ const Auth = () => {
   };
   const getData = (data) => {
     console.log(data);
+    console.log('111111111111111111111111111111111111111111111111')
     sendUserAuthRequest(data.inputs, data.signup)
       .then(onResReceived)
       .catch((err) => console.log(err));
